@@ -1,0 +1,23 @@
+.discussion__wrapper {
+  margin-top: 5px;
+  max-height: 49vh;
+  overflow: auto;
+  /* padding: 5px; */
+}
+
+.discussion__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.discussion__container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 540px;
+  background-color: #ffffff;
+}
+
+.discussion__container:hover {
+  background-color: #efeeee;
+  transition: 0.3s;
+}

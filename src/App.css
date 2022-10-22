@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "IBMPlexSansKR-Regular";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  padding: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #eae7ed;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  border-radius: 20px;
+  padding: 50px;
+  background: rgb(53, 50, 167);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 50, 167, 1) 0%,
+    rgba(100, 110, 203, 1) 32%,
+    rgba(183, 147, 230, 1) 100%
+  );
+  box-shadow: 1px 1px 20px 3px grey;
+  height: 90%;
+  /* overflow: hidden; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  text-shadow: rgb(99, 99, 99) 1px 0 10px;
 }
