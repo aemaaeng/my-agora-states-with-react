@@ -3,8 +3,9 @@ import "../Styles/Discussion.css";
 
 // 디스커션 하나
 const Discussion = ({ discussion }) => {
-  // 답변이 존재하면 체크박스 바꾸는 것 구현하기
-  // 트위틀러 김코딩 필터링 참고
+  const isAnswered = discussion.answer
+    ? "fa-circle-check fa-solid"
+    : "fa-circle-check fa-regular";
   return (
     <li className="discussion__container" id={discussion.id}>
       <div className="discussion__avatar--wrapper">
@@ -27,7 +28,7 @@ const Discussion = ({ discussion }) => {
         </div>
       </div>
       <div className="discussion__answered">
-        <i className="fa-circle-check fa-regular"></i>
+        <i className={isAnswered}></i>
       </div>
     </li>
   );
