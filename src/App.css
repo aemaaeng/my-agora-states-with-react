@@ -5,22 +5,6 @@
     format("woff");
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "IBMPlexSansKR-Regular";
-}
-
-body {
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eae7ed;
-  height: 100%;
-}
-
 main {
   border-radius: 20px;
   padding: 50px;

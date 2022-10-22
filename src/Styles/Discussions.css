@@ -1,3 +1,70 @@
+.form {
+  width: 540px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-radius: 10px;
+  background-color: #ffffff35;
+  color: #ffffff;
+  text-shadow: rgb(99, 99, 99) 1px 0 10px;
+}
+
+.form__input--wrapper {
+  padding: 5px 0px 5px 10px;
+}
+
+.form__input--wrapper > div {
+  margin-top: 5px;
+}
+
+.form__input--wrapper input {
+  padding-left: 3px;
+}
+
+#name {
+  width: 120px;
+}
+
+#title {
+  width: 200px;
+}
+
+.form__input--wrapper textarea {
+  width: 300px;
+  height: 64px;
+  padding: 3px;
+  vertical-align: top;
+  resize: none;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+  width: 66px;
+}
+
+.form__submit {
+  text-align: center;
+  flex-grow: 1;
+  padding-bottom: 5px;
+}
+
+#submit {
+  background: #3532a7;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 20px 40px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #49469f;
+  transition: 0.3s;
+}
+
 .discussion__wrapper {
   margin-top: 5px;
   max-height: 49vh;
