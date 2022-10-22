@@ -30,6 +30,7 @@ const Discussions = () => {
 
   // 버튼을 눌렀을 때 배열에 추가되는 이벤트 핸들러
   const handleButtonClick = (event) => {
+    event.preventDefault();
     // 추가할 질문
     const discussion = {
       id: discussions.length,
@@ -53,11 +54,23 @@ const Discussions = () => {
           <div className="form__input--wrapper">
             <div className="form__input--name">
               <label for="name">작성자: </label>
-              <input type="text" name="name" id="name" required />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                onChange={handleUsername}
+                required
+              />
             </div>
             <div className="form__input--title">
               <label for="name">질문 제목: </label>
-              <input type="text" name="title" id="title" required />
+              <input
+                type="text"
+                name="title"
+                id="title"
+                onChange={handleTitle}
+                required
+              />
             </div>
             <div className="form__textbox">
               <label for="story">질문 내용: </label>
@@ -70,7 +83,12 @@ const Discussions = () => {
             </div>
           </div>
           <div className="form__submit">
-            <input type="submit" value="등록" id="submit" />
+            <input
+              type="submit"
+              value="등록"
+              id="submit"
+              onClick={handleButtonClick}
+            />
           </div>
         </form>
       </section>
