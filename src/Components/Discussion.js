@@ -11,18 +11,18 @@ const Discussion = ({ discussion }) => {
       <div className="discussion__avatar--wrapper">
         <img
           className="discussion__avatar--image"
-          src={discussion.avatarUrl}
-          alt={`avatar of ${discussion.author}`}
+          src={discussion.author.avatarUrl}
+          alt={`avatar of ${discussion.author.login}`}
         />
       </div>
       <div className="discussion__content">
         <h2 className="discussion__title">
-          <a href={discussion.url} target="_blank">
+          <a href={discussion.url} target="_blank" rel="noreferrer">
             {discussion.title}
           </a>
         </h2>
         <div className="discussion__information">
-          {`${discussion.author} | ${new Date(
+          {`${discussion.author.login} | ${new Date(
             discussion.createdAt
           ).toLocaleString()}`}
         </div>

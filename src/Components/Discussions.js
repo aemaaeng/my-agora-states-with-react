@@ -15,7 +15,10 @@ const Discussions = () => {
 
   // fetch로 데이터 불러오기
   useEffect(() => {
-    getDiscussions().then((data) => addDiscussion(data));
+    getDiscussions().then((res) => {
+      addDiscussion(res.discussions.edges);
+      console.log(res.discussions.edges);
+    });
   }, []);
 
   // 작성자 저장
@@ -53,7 +56,7 @@ const Discussions = () => {
         <form action="" method="get" className="form">
           <div className="form__input--wrapper">
             <div className="form__input--name">
-              <label for="name">작성자: </label>
+              <label htmlFor="name">작성자: </label>
               <input
                 type="text"
                 name="name"
@@ -63,7 +66,7 @@ const Discussions = () => {
               />
             </div>
             <div className="form__input--title">
-              <label for="name">질문 제목: </label>
+              <label htmlFor="name">질문 제목: </label>
               <input
                 type="text"
                 name="title"
@@ -73,7 +76,7 @@ const Discussions = () => {
               />
             </div>
             <div className="form__textbox">
-              <label for="story">질문 내용: </label>
+              <label htmlFor="story">질문 내용: </label>
               <textarea
                 id="story"
                 name="story"
@@ -95,7 +98,7 @@ const Discussions = () => {
       <section className="discussion__wrapper">
         <ul className="discussions__container">
           {discussions.map((el) => (
-            <Discussion key={el.id} discussion={el} />
+            <Discussion key={el.node.id} discussion={el.node} />
           ))}
         </ul>
       </section>
